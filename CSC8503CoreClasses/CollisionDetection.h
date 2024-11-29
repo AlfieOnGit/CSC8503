@@ -19,9 +19,13 @@ namespace NCL {
 	{
 	public:
 		struct ContactPoint {
+			// Where the collision happened relative to shape A's origin
 			Vector3 localA;
+			// Where the collision happened relative to shape B's origin
 			Vector3 localB;
+			// The normalised displacement between the colliding shapes' origins
 			Vector3 normal;
+			// The length of the penetration between the two shapes
 			float	penetration;
 		};
 		struct CollisionInfo {

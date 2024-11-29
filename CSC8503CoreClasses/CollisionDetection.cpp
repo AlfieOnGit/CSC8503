@@ -287,7 +287,7 @@ bool CollisionDetection::SphereIntersection(const SphereVolume& volumeA, const T
 	float penetration = radii - deltaLength;
 	Vector3 normal = Vector::Normalise(delta);
 	Vector3 localA = normal * volumeA.GetRadius();
-	Vector3 localB = normal * volumeB.GetRadius();
+	Vector3 localB = -normal * volumeB.GetRadius();
 
 	collisionInfo.AddContactPoint(localA, localB, normal, penetration);
 	return true;

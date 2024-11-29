@@ -203,7 +203,7 @@ void PhysicsSystem::BasicCollisionDetection() {
 
 			CollisionDetection::CollisionInfo info;
 			if (CollisionDetection::ObjectIntersection(*i, *j, info)) {
-				std::cout << "Collision between " << (*i)->GetName() << " and " << (*j)->GetName() << "!\n";
+				ImpulseResolveCollision(*info.a, *info.b, info.point);
 				info.framesLeft = numCollisionFrames;
 				allCollisions.insert(info);
 			}
@@ -218,7 +218,51 @@ so that objects separate back out.
 
 */
 void PhysicsSystem::ImpulseResolveCollision(GameObject& a, GameObject& b, CollisionDetection::ContactPoint& p) const {
+	PhysicsObject* physA = a.GetPhysicsObject();
+	PhysicsObject* physB = b.GetPhysicsObject();
 
+	const float totalInvMass = physA->GetInverseMass() + physB->GetInverseMass();
+
+	// EFFECT ON THE POSITIONS
+	Transform& transformA = a.GetTransform();
+	Transform& transformB = b.GetTransform();
+
+	// If two static objects
+	if (totalInvMass == 0) return;
+
+	transformA.SetPosition(transformA.GetPosition() - p.normal * p.penetration
+		* (physA->GetInverseMass() / totalInvMass));
+	transformB.SetPosition(transformB.GetPosition() + p.normal * p.penetration
+		* (physB->GetInverseMass() / totalInvMass));
+
+	// EFFECT ON THE VELOCITIES
+	const Vector3 relativeA = p.localA;
+	const Vector3 relativeB = p.localB;
+
+	const Vector3 angVelocityA = Vector::Cross(physA->GetAngularVelocity(), relativeA);
+	const Vector3 angVelocityB = Vector::Cross(physB->GetAngularVelocity(), relativeB);
+
+	const Vector3 fullVelocityA = physA->GetLinearVelocity() + angVelocityA;
+	const Vector3 fullVelocityB = physB->GetLinearVelocity() + angVelocityB;
+
+	const Vector3 contactVelocity = fullVelocityB - fullVelocityA;
+
+	const float impulseForce = Vector::Dot(contactVelocity, p.normal);
+
+	const Vector3 inertiaA = Vector::Cross(physA->GetInertiaTensor() * Vector::Cross(relativeA, p.normal), relativeA);
+	const Vector3 inertiaB = Vector::Cross(physB->GetInertiaTensor() * Vector::Cross(relativeB, p.normal), relativeB);
+	const float angularEffect = Vector::Dot(inertiaA + inertiaB, p.normal);
+
+	constexpr float cRestitution = 0.66f;
+
+	const float j = ( -(1.0f + cRestitution) * impulseForce) / (totalInvMass + angularEffect);
+
+	const Vector3 fullImpulse = p.normal * j;
+
+	physA->ApplyLinearImpulse(-fullImpulse);
+	physB->ApplyLinearImpulse(fullImpulse);
+	physA->ApplyAngularImpulse(Vector::Cross(relativeA, -fullImpulse));
+	physB->ApplyAngularImpulse(Vector::Cross(relativeB, fullImpulse));
 }
 
 /*

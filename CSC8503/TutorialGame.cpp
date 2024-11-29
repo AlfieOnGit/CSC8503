@@ -160,6 +160,10 @@ void TutorialGame::UpdateKeys() {
 		useGravity = !useGravity; //Toggle gravity!
 		physics->UseGravity(useGravity);
 	}
+
+	if (Window::GetKeyboard()->KeyPressed(KeyCodes::L)) {
+		world->GetMainCamera().SetPosition(Vector3(500, 500, 500));
+	}
 	//Running certain physics updates in a consistent order might cause some
 	//bias in the calculations - the same objects might keep 'winning' the constraint
 	//allowing the other one to stretch too much etc. Shuffling the order so that it
@@ -268,6 +272,7 @@ void TutorialGame::InitWorld() {
 
 	InitGameExamples();
 	InitDefaultFloor();
+	BridgeConstraintTest();
 }
 
 /*
@@ -417,6 +422,34 @@ GameObject* TutorialGame::AddBonusToWorld(const Vector3& position) {
 void TutorialGame::InitDefaultFloor() {
 	AddFloorToWorld(Vector3(0, -20, 0));
 }
+
+void TutorialGame::BridgeConstraintTest() {
+	const auto cubeSize = Vector3(8, 8, 8);
+
+	constexpr float invCubeMass = 5;
+	constexpr int numLinks = 10;
+	constexpr float maxDistance = 30;
+	constexpr float cubeDistance = 20;
+
+	const auto startPos = Vector3(500, 500, 500);
+
+	GameObject* start = AddCubeToWorld(startPos + Vector3(0, 0, 0), cubeSize, 0);
+	GameObject* end = AddCubeToWorld(startPos + Vector3((numLinks + 2) * cubeDistance, 0, 0),
+		cubeSize, 0);
+	GameObject* previous = start;
+
+	for (int i = 0; i < numLinks; ++i) {
+		GameObject* block = AddCubeToWorld(startPos + Vector3((i + 1) * cubeDistance, 0, 0),
+			cubeSize, invCubeMass);
+		auto* constraint = new PositionConstraint(previous, block, maxDistance);
+		world->AddConstraint(constraint);
+		previous = block;
+	}
+
+	auto* constraint = new PositionConstraint(previous, end, maxDistance);
+	world->AddConstraint(constraint);
+}
+
 
 void TutorialGame::InitGameExamples() {
 	AddPlayerToWorld(Vector3(0, 5, 0));

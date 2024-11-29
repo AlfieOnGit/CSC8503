@@ -34,27 +34,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/CSC8503/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/CSC8503/v17/.wsuo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourAction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourSelector.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourSelector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503/TutorialGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503/TutorialGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503/TutorialGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503/TutorialGame.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/PhysicsSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/PhysicsSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/Ray.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/Ray.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/RenderObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/RenderObject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Keyboard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Mesh.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Mouse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Texture.h" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Texture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Vector.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenGLRendering/OGLMesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/OpenGLRendering/OGLMesh.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenGLRendering/OGLRenderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/OpenGLRendering/OGLRenderer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenGLRendering/OGLTexture.h" beforeDir="false" afterPath="$PROJECT_DIR$/OpenGLRendering/OGLTexture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/PositionConstraint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/PositionConstraint.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +68,9 @@
     &quot;accountId&quot;: &quot;4643c4c9-a994-47be-b36d-d6831f38a4ed&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -100,6 +91,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
@@ -108,11 +100,16 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="CMake Application.CSC8503">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
     </configuration>
@@ -157,7 +154,7 @@
       <workItem from="1732717901967" duration="67000" />
       <workItem from="1732718055547" duration="6328000" />
       <workItem from="1732791487882" duration="16884000" />
-      <workItem from="1732876384144" duration="1780000" />
+      <workItem from="1732876384144" duration="11377000" />
     </task>
     <servers />
   </component>
