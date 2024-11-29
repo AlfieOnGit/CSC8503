@@ -41,15 +41,56 @@ namespace NCL {
 			}
 
 			void Insert(T& object, const Vector3& objectPos, const Vector3& objectSize, int depthLeft, int maxSize) {
+				// Check that object should be in this node. If not, return without inserting
+				if (!CollisionDetection::AABBTest(objectPos, Vector3(position.x, 0, position.y),
+					objectSize, Vector3(size.x, 1000.0f, size.y))) return;
+
+				// If not the lowest quad tree node, attempt to insert object into child nodes
+				if (children) {
+					for (int i = 0; i < 4; ++i)
+						children[i].Insert(object, objectPos, objectSize, depthLeft - 1, maxSize);
+					return;
+				}
+				// Else insert into contents
+				contents.push_back(QuadTreeEntry<T>(object, objectPos, objectSize));
+
+
+				// Check if quad tree node is full. If it is, split into children
+
+				// If not full
+				if (static_cast<int>(contents.size() <= maxSize || depthLeft <= 0)) return;
+
+				// Create child nodes and attempt to insert child object into all
+				// (will only be inserted into overlapping nodes)
+				Split();
+				for (const auto& i : contents) {
+					for (int j = 0; j < 4; ++j) {
+						auto entry = i;
+						children[j].Insert(entry.object, entry.pos, entry.size, depthLeft - 1, maxSize);
+					}
+				}
+				contents.clear();
 			}
 
+			// Creates 4 sub QuadTreeNodes in the children member function
 			void Split() {
+				Vector2 halfSize = size / 2.0f;
+				children = new QuadTreeNode[4];
+				children[0] = QuadTreeNode(position + Vector2(-halfSize.x, halfSize.y), halfSize);
+				children[1] = QuadTreeNode(position + Vector2(halfSize.x, halfSize.y), halfSize);
+				children[2] = QuadTreeNode(position + Vector2(-halfSize.x, -halfSize.y), halfSize);
+				children[3] = QuadTreeNode(position + Vector2(halfSize.x, -halfSize.y), halfSize);
 			}
 
 			void DebugDraw() {
 			}
 
 			void OperateOnContents(QuadTreeFunc& func) {
+				if (children) {
+					for (int i = 0; i < 4; ++i) children[i].OperateOnContents(func);
+				} else {
+					if (!contents.empty()) func(contents);
+				}
 			}
 
 		protected:

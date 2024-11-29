@@ -33,16 +33,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Constraints and solvers tutorial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503/TutorialGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503/TutorialGame.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503/TutorialGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503/TutorialGame.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/PhysicsSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/PhysicsSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/PositionConstraint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/PositionConstraint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/QuadTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/QuadTree.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +94,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -154,8 +148,17 @@
       <workItem from="1732717901967" duration="67000" />
       <workItem from="1732718055547" duration="6328000" />
       <workItem from="1732791487882" duration="16884000" />
-      <workItem from="1732876384144" duration="11377000" />
+      <workItem from="1732876384144" duration="17702000" />
     </task>
+    <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
+      <option name="closed" value="true" />
+      <created>1732890729718</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732890729718</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +184,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Constraints and solvers tutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constraints and solvers tutorial" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
