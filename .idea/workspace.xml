@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="CSC8503" targetName="CSC8503CoreClasses" />
+      <config projectName="CSC8503" targetName="NCLCoreClasses" />
+      <config projectName="CSC8503" targetName="CSC8503" />
+      <config projectName="CSC8503" targetName="OpenGLRendering" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-Visual Studio" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Visual Studio" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/CSC8503/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/CSC8503/v17/.wsuo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourAction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourSelector.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourSelector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/CollisionDetection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/PhysicsSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/PhysicsSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/Ray.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/Ray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/RenderObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/RenderObject.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Keyboard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Mesh.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Mouse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Texture.h" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Texture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NCLCoreClasses/Vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/NCLCoreClasses/Vector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenGLRendering/OGLMesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/OpenGLRendering/OGLMesh.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenGLRendering/OGLRenderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/OpenGLRendering/OGLRenderer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenGLRendering/OGLTexture.h" beforeDir="false" afterPath="$PROJECT_DIR$/OpenGLRendering/OGLTexture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Visual Studio" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlfieOnGit&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlfieOnGit/CSC8503.git&quot;,
+    &quot;accountId&quot;: &quot;4643c4c9-a994-47be-b36d-d6831f38a4ed&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2pR7TjHxVr6nPKyT6Hgjo7oTqYt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.CSC8503.executor": "Run",
+    "CMake Debug.Unnamed.executor": "Debug",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="CMake Application.CSC8503">
+    <configuration name="Unnamed" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
+      <method v="2" />
+    </configuration>
+    <configuration name="CSC8503" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="CSC8503" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="CSC8503" RUN_TARGET_NAME="CSC8503">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CSC8503CoreClasses" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="CSC8503CoreClasses" CONFIG_NAME="Debug-Visual Studio">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NCLCoreClasses" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="NCLCoreClasses" CONFIG_NAME="Debug-Visual Studio">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenGLRendering" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="OpenGLRendering" CONFIG_NAME="Debug-Visual Studio">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.CSC8503" />
+      <item itemvalue="CMake Application.CSC8503CoreClasses" />
+      <item itemvalue="CMake Application.NCLCoreClasses" />
+      <item itemvalue="CMake Application.OpenGLRendering" />
+      <item itemvalue="CMake Debug.Unnamed" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="" />
+      <created>1732621597751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732621597751</updated>
+      <workItem from="1732621599736" duration="556000" />
+      <workItem from="1732717047635" duration="716000" />
+      <workItem from="1732717901967" duration="67000" />
+      <workItem from="1732718055547" duration="6328000" />
+      <workItem from="1732791487882" duration="16884000" />
+      <workItem from="1732876384144" duration="1780000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
