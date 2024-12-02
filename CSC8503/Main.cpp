@@ -37,6 +37,33 @@ void TestPathfinding() {
 void DisplayPathfinding() {
 }
 
+void TestStateMachine() {
+	auto* testMachine = new StateMachine();
+	int data = 0;
+
+	auto* stateA = new State([&](float dt)->void {
+		std::cout << "I'm in state A!\n";
+		data++;
+	});
+
+	auto* stateB = new State([&](float dt)->void {
+		std::cout << "I'm in state B!\n";
+		data--;
+	});
+
+	auto* transitionAB = new StateTransition(stateA, stateB, [&](void)->bool { return data > 10; });
+	auto* transitionBA = new StateTransition(stateB, stateA, [&](void)->bool { return data < 0; });
+
+	testMachine->AddState(stateA);
+	testMachine->AddState(stateB);
+	testMachine->AddTransition(transitionAB);
+	testMachine->AddTransition(transitionBA);
+
+	for (int i = 0; i < 100; ++i) {
+		testMachine->Update(1.0f);
+	}
+}
+
 /*
 
 The main function should look pretty familar to you!
@@ -50,6 +77,8 @@ hide or show the
 
 */
 int main() {
+	//TestStateMachine();
+
 	WindowInitialisation initInfo;
 	initInfo.width		= 1280;
 	initInfo.height		= 720;

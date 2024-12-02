@@ -101,6 +101,8 @@ void TutorialGame::UpdateGame(float dt) {
 		world->GetMainCamera().SetYaw(angles.y);
 	}
 
+	if (testStateObject) testStateObject->Update(dt);
+
 	UpdateKeys();
 
 	if (useGravity) {
@@ -273,6 +275,8 @@ void TutorialGame::InitWorld() {
 	InitGameExamples();
 	InitDefaultFloor();
 	BridgeConstraintTest();
+
+	testStateObject = AddStateCubeToWorld(Vector3(0, 0, 0), Vector3(10, 10, 10), 1);
 }
 
 /*
@@ -418,6 +422,25 @@ GameObject* TutorialGame::AddBonusToWorld(const Vector3& position) {
 
 	return apple;
 }
+
+StateGameObject *TutorialGame::AddStateCubeToWorld(const Vector3 &position, Vector3 dimensions, float inverseMass) {
+	auto* out = new StateGameObject();
+
+	AABBVolume* volume = new AABBVolume(dimensions);
+	out->SetBoundingVolume((CollisionVolume*)volume);
+	out->GetTransform().SetPosition(position).SetScale(dimensions * 0.2f);
+
+	out->SetRenderObject(new RenderObject(&out->GetTransform(), cubeMesh, basicTex, basicShader));
+	out->SetPhysicsObject(new PhysicsObject(&out->GetTransform(), out->GetBoundingVolume()));
+
+	out->GetPhysicsObject()->SetInverseMass(inverseMass);
+	out->GetPhysicsObject()->InitCubeInertia();
+
+	world->AddGameObject(out);
+
+	return out;
+}
+
 
 void TutorialGame::InitDefaultFloor() {
 	AddFloorToWorld(Vector3(0, -20, 0));

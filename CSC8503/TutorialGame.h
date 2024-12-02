@@ -53,6 +53,8 @@ namespace NCL {
 			GameObject* AddEnemyToWorld(const Vector3& position);
 			GameObject* AddBonusToWorld(const Vector3& position);
 
+			StateGameObject* AddStateCubeToWorld(const Vector3 &position, Vector3 dimensions, float inverseMass);
+
 #ifdef USEVULKAN
 			GameTechVulkanRenderer*	renderer;
 #else
@@ -91,6 +93,7 @@ namespace NCL {
 			}
 
 			GameObject* objClosest = nullptr;
+			StateGameObject* testStateObject;
 		};
 	}
 }
