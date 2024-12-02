@@ -1,4 +1,4 @@
-//#pragma once
+#pragma once
 #include "BehaviourNodeWithChildren.h"
 
 class BehaviourSelector: public BehaviourNodeWithChildren {

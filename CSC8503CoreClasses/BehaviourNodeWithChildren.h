@@ -4,11 +4,13 @@
 class BehaviourNodeWithChildren : public BehaviourNode	{
 public:
 	BehaviourNodeWithChildren(const std::string& nodeName) : BehaviourNode(nodeName){};
+
 	~BehaviourNodeWithChildren() {
 		for (auto& i : childNodes) {
 			delete i;
 		}
 	}
+
 	void AddChild(BehaviourNode* n) {
 		childNodes.emplace_back(n);
 	}

@@ -17,7 +17,7 @@ public:
 	virtual BehaviourState Execute(float dt) = 0;
 
 	//BehaviourState	GetState() const {return currentState; }
-	virtual void	Reset()			 {currentState = Initialise; }
+	virtual void	Reset()			 { currentState = Initialise; }
 protected:
 	BehaviourState	currentState;
 	std::string		name;
