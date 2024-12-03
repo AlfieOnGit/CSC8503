@@ -25,6 +25,7 @@
       <config projectName="CSC8503" targetName="NCLCoreClasses" />
       <config projectName="CSC8503" targetName="CSC8503" />
       <config projectName="CSC8503" targetName="OpenGLRendering" />
+      <config projectName="CSC8503" targetName="Coursework" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -33,12 +34,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Pathfinding">
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Pushdown automata">
+      <change afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Screen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503/Main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourNode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourNodeWithChildren.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourNodeWithChildren.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourSelector.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/BehaviourSelector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +50,16 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Visual Studio" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -110,6 +119,15 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="3" />
+    <option name="productBranch" value="Classic" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -122,7 +140,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "C/C++ File.Main.cpp.executor": "Run",
     "CMake Application.CSC8503.executor": "Run",
+    "CMake Application.Coursework.executor": "Run",
     "CMake Debug.Unnamed.executor": "Debug",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -134,16 +154,27 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/c1012538/CLionProjects/CSC8503",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="CMake Application.CSC8503">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\c1012538\CLionProjects\CSC8503" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.Coursework">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
     </configuration>
@@ -153,6 +184,11 @@
       </method>
     </configuration>
     <configuration name="CSC8503CoreClasses" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="CSC8503CoreClasses" CONFIG_NAME="Debug-Visual Studio">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Coursework" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="Coursework" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="CSC8503" RUN_TARGET_NAME="Coursework">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -167,18 +203,26 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="Main.cpp" CONFIG_NAME="Main.cpp">
+      <option name="sourceFile" value="Coursework\Main.cpp" />
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="C/C++ File.Main.cpp" />
+      <item itemvalue="CMake Application.Coursework" />
       <item itemvalue="CMake Application.CSC8503" />
       <item itemvalue="CMake Application.CSC8503CoreClasses" />
       <item itemvalue="CMake Application.NCLCoreClasses" />
       <item itemvalue="CMake Application.OpenGLRendering" />
       <item itemvalue="CMake Debug.Unnamed" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.Main.cpp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -194,7 +238,8 @@
       <workItem from="1732718055547" duration="6328000" />
       <workItem from="1732791487882" duration="16884000" />
       <workItem from="1732876384144" duration="17868000" />
-      <workItem from="1733155046812" duration="7820000" />
+      <workItem from="1733155046812" duration="9391000" />
+      <workItem from="1733238092921" duration="8202000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -228,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733160933945</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Behaviour Tree">
+      <option name="closed" value="true" />
+      <created>1733163379508</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733163379508</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Pushdown automata">
+      <option name="closed" value="true" />
+      <created>1733164934566</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733164934566</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +319,9 @@
     <MESSAGE value="Spatial Acceleration Structures" />
     <MESSAGE value="State machines" />
     <MESSAGE value="Pathfinding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pathfinding" />
+    <MESSAGE value="Behaviour Tree" />
+    <MESSAGE value="Pushdown automata" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushdown automata" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
