@@ -102,18 +102,17 @@ void NetworkedGame::BroadcastSnapshot(bool deltaFrame) {
 
 	for (auto i = first; i != last; ++i) {
 		NetworkObject* o = (*i)->GetNetworkObject();
-		if (!o) {
-			continue;
-		}
+		if (!o) continue;
 		//TODO - you'll need some way of determining
 		//when a player has sent the server an acknowledgement
 		//and store the lastID somewhere. A map between player
 		//and an int could work, or it could be part of a 
-		//NetworkPlayer struct. 
-		int playerState = 0;
+		//NetworkPlayer struct.
+		int playerState = o->GetLastFullID(); // TODO: This should work? Test pls
+		//int playerState = 0;
 		GamePacket* newPacket = nullptr;
 		if (o->WritePacket(&newPacket, deltaFrame, playerState)) {
-			thisServer->SendGlobalPacket(*newPacket);
+			thisServer->SendGlobalPacket(*newPacket); // TODO: change this
 			delete newPacket;
 		}
 	}

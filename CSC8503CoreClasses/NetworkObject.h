@@ -49,6 +49,8 @@ namespace NCL::CSC8503 {
 
 		void UpdateStateHistory(int minID);
 
+		int GetLastFullID() const { return lastFullState.stateID; }
+
 	protected:
 
 		NetworkState& GetLatestNetworkState();
