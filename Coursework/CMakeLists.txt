@@ -38,6 +38,8 @@ if(USE_VULKAN)
             Screen/Screen.h
             Game.cpp
             Game.h
+            Character/Cat.cpp
+            Character/Cat.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -99,6 +101,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
+        Character/Cat.cpp
         GameTechRenderer/GameTechRenderer.cpp
         GameTechRenderer/GameTechVulkanRenderer.cpp
         Screen/

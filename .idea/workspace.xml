@@ -34,22 +34,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add Coursework project">
-      <change afterPath="$PROJECT_DIR$/Coursework/Game.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/Game.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/GameTechRenderer/GameTechRenderer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/GameTechRenderer/GameTechRenderer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/GameTechRenderer/GameTechVulkanRenderer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/GameTechRenderer/GameTechVulkanRenderer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/Screen/Screen.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add some coursework code">
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Cat.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503/Main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/AABBVolume.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/AABBVolume.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC8503CoreClasses/SphereVolume.h" beforeDir="false" afterPath="$PROJECT_DIR$/CSC8503CoreClasses/SphereVolume.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Screen.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +80,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CSC8503/TutorialGame.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coursework/Character/Cat.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coursework/Game.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Screen/Screen.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -146,6 +140,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Coursework">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
     </configuration>
@@ -170,11 +169,6 @@
       </method>
     </configuration>
     <configuration name="OpenGLRendering" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CSC8503" TARGET_NAME="OpenGLRendering" CONFIG_NAME="Debug-Visual Studio">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -218,7 +212,8 @@
       <workItem from="1733238092921" duration="10142000" />
       <workItem from="1733316652510" duration="7381000" />
       <workItem from="1733850421391" duration="8392000" />
-      <workItem from="1733875186547" duration="2742000" />
+      <workItem from="1733875186547" duration="4725000" />
+      <workItem from="1733882119619" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -276,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733246439396</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add some coursework code">
+      <option name="closed" value="true" />
+      <created>1733880105100</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733880105100</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +312,8 @@
     <MESSAGE value="Behaviour Tree" />
     <MESSAGE value="Pushdown automata" />
     <MESSAGE value="Add Coursework project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Coursework project" />
+    <MESSAGE value="Add some coursework code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some coursework code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

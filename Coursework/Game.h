@@ -7,6 +7,8 @@
 #include "GameWorld.h"
 #include "KeyboardMouseController.h"
 #include "PhysicsSystem.h"
+#include "RenderObject.h"
+#include "Character/Cat.h"
 #include "GameTechRenderer/GameTechRenderer.h"
 #include "Screen/Screen.h"
 
@@ -24,13 +26,17 @@ public:
 
     void Update(float dt) override;
 
+    [[nodiscard]] GameWorld* getWorld() const { return world; }
+    [[nodiscard]] GameTechRenderer* getRenderer() const { return renderer; }
+    [[nodiscard]] Shader* getShader() const { return basicShader; }
+
 private:
     void InitRenderer();
     void InitCamera();
     void InitWorld();
 
     GameObject* AddFloorToWorld(const Vector3& position) const;
-    GameObject* AddCatToWorld(const Vector3& position) const;
+    //GameObject* AddCatToWorld(const Vector3& position) const;
 
     void UpdateKeys();
     void LockCameraToObject(GameObject* o) { lockedObject = o; }
@@ -60,8 +66,8 @@ private:
     Texture* basicTex = nullptr;
     Shader* basicShader = nullptr;
 
-    //Coursework Meshes
-    Mesh* catMesh = nullptr;
+    Cat* player = nullptr;
+
     Mesh* kittenMesh = nullptr;
     Mesh* enemyMesh	= nullptr;
     Mesh* bonusMesh	= nullptr;

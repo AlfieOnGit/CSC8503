@@ -5,7 +5,7 @@
 #include "Game.h"
 
 #include "PhysicsObject.h"
-#include "RenderObject.h"
+#include "Character/Cat.h"
 
 Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindow()->GetMouse()) {
     world = new GameWorld();
@@ -35,16 +35,17 @@ Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindo
     InitWorld();
 }
 
+
 Game::~Game() {
     delete world;
     delete physics;
     delete renderer;
 }
 
+
 void Game::InitRenderer() {
     cubeMesh	= renderer->LoadMesh("cube.msh");
     sphereMesh	= renderer->LoadMesh("sphere.msh");
-    catMesh		= renderer->LoadMesh("ORIGAMI_Chat.msh");
     kittenMesh	= renderer->LoadMesh("Kitten.msh");
 
     enemyMesh	= renderer->LoadMesh("Keeper.msh");
@@ -55,6 +56,7 @@ void Game::InitRenderer() {
     basicShader = renderer->LoadShader("scene.vert", "scene.frag");
 }
 
+
 void Game::InitCamera() {
     world->GetMainCamera().SetNearPlane(0.1f);
     world->GetMainCamera().SetFarPlane(500.0f);
@@ -64,6 +66,7 @@ void Game::InitCamera() {
     lockedObject = nullptr;
 }
 
+
 void Game::InitWorld() {
     world->ClearAndErase();
     physics->Clear();
@@ -72,31 +75,9 @@ void Game::InitWorld() {
     Transform& transform = AddFloorToWorld(Vector3(0, -20, 0))->GetTransform();
     float x = transform.GetScale().x / 2 + transform.GetPosition().x;
     float z = transform.GetScale().z / 2 + transform.GetPosition().z;
-    LockCameraToObject(AddCatToWorld(Vector3(x, 0, z)));
-}
-
-GameObject *Game::AddCatToWorld(const Vector3 &position) const {
-    float constexpr meshSize		= 1.0f;
-    float constexpr inverseMass	= 0.5f;
-
-    auto* character = new GameObject();
-    auto* volume  = new SphereVolume(1.0f);
-
-    character->SetBoundingVolume(volume);
-
-    character->GetTransform()
-        .SetScale(Vector3(meshSize, meshSize, meshSize))
-        .SetPosition(position);
-
-    character->SetRenderObject(new RenderObject(&character->GetTransform(), catMesh, nullptr, basicShader));
-    character->SetPhysicsObject(new PhysicsObject(&character->GetTransform(), character->GetBoundingVolume()));
-
-    character->GetPhysicsObject()->SetInverseMass(inverseMass);
-    character->GetPhysicsObject()->InitSphereInertia();
-
-    world->AddGameObject(character);
-
-    return character;
+    //LockCameraToObject(AddCatToWorld(Vector3(x, 0, z)));
+    player = new Cat(*this, Vector3(x, 0, z));
+    world->AddGameObject(player);
 }
 
 
@@ -153,5 +134,3 @@ void Game::Update(float const dt) {
 void Game::UpdateKeys() {
     //if (Window::GetKeyboard()->Key)
 }
-
-
