@@ -324,8 +324,8 @@ hide or show the
 int main() {
 	//TestStateMachine();
 	//TestBehaviourTree();
-	TestNetworking();
-	return 0;
+	//TestNetworking();
+	//return 0;
 
 	WindowInitialisation initInfo;
 	initInfo.width		= 1280;

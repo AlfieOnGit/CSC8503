@@ -35,11 +35,9 @@ if(USE_VULKAN)
             ${Header_Files}
             ${Source_Files}
             ${SHADER_FILES}
-            Screen.cpp
-            Screen/Screen.cpp
             Screen/Screen.h
-            Screen/Screen.cpp
-            Screen/Screen.h
+            Game.cpp
+            Game.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -100,9 +98,11 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
         INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
 )
 
-#target_sources(${PROJECT_NAME} PRIVATE
-#        Screen/Screen.cpp
-#)
+target_sources(${PROJECT_NAME} PRIVATE
+        GameTechRenderer/GameTechRenderer.cpp
+        GameTechRenderer/GameTechVulkanRenderer.cpp
+        Screen/
+)
 
 ################################################################################
 # Compile definitions
