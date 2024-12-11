@@ -4,8 +4,8 @@
 
 #include "Game.h"
 
-#include "PhysicsObject.h"
 #include "Character/Cat.h"
+#include "Solid/Cube.h"
 
 Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindow()->GetMouse()) {
     world = new GameWorld();
@@ -20,7 +20,6 @@ Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindo
 #endif
 
     forceMagnitude = 10.0f;
-    useGravity = false;
     inSelectionMode = false;
     world->GetMainCamera().SetController(controller);
 
@@ -33,6 +32,8 @@ Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindo
     InitRenderer();
     InitCamera();
     InitWorld();
+
+    physics->UseGravity(true);
 }
 
 
@@ -44,7 +45,6 @@ Game::~Game() {
 
 
 void Game::InitRenderer() {
-    cubeMesh	= renderer->LoadMesh("cube.msh");
     sphereMesh	= renderer->LoadMesh("sphere.msh");
     kittenMesh	= renderer->LoadMesh("Kitten.msh");
 
@@ -63,7 +63,6 @@ void Game::InitCamera() {
     world->GetMainCamera().SetPitch(-15.0f);
     world->GetMainCamera().SetYaw(315.0f);
     world->GetMainCamera().SetPosition(Vector3(-60, 40, 60));
-    lockedObject = nullptr;
 }
 
 
@@ -71,36 +70,15 @@ void Game::InitWorld() {
     world->ClearAndErase();
     physics->Clear();
 
-    //GameObject* floor = AddFloorToWorld(Vector3(0, -20, 0));
-    Transform& transform = AddFloorToWorld(Vector3(0, -20, 0))->GetTransform();
-    float x = transform.GetScale().x / 2 + transform.GetPosition().x;
-    float z = transform.GetScale().z / 2 + transform.GetPosition().z;
-    //LockCameraToObject(AddCatToWorld(Vector3(x, 0, z)));
-    player = new Cat(*this, Vector3(x, 0, z));
-    world->AddGameObject(player);
-}
-
-
-GameObject* Game::AddFloorToWorld(const Vector3& position) const {
-    auto* floor = new GameObject();
-
-    auto const floorSize = Vector3(200, 2, 200);
-    auto* volume = new AABBVolume(floorSize);
-    floor->SetBoundingVolume(volume);
-    floor->SetBoundingVolume(volume);
-    floor->GetTransform()
-        .SetScale(floorSize * 2.0f)
-        .SetPosition(position);
-
-    floor->SetRenderObject(new RenderObject(&floor->GetTransform(), cubeMesh, basicTex, basicShader));
-    floor->SetPhysicsObject(new PhysicsObject(&floor->GetTransform(), floor->GetBoundingVolume()));
-
-    floor->GetPhysicsObject()->SetInverseMass(0);
-    floor->GetPhysicsObject()->InitCubeInertia();
-
+    auto* floor = new Cube(*this, Vector3(0, -20, 0));
     world->AddGameObject(floor);
 
-    return floor;
+    Transform const transform = floor->GetTransform();
+    float const x = transform.GetScale().x / 2 + transform.GetPosition().x;
+    float const z = transform.GetScale().z / 2 + transform.GetPosition().z;
+    player = new Cat(*this, Vector3(x, 0, z));
+    world->AddGameObject(player);
+    LockCameraToObject(player);
 }
 
 

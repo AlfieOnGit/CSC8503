@@ -2,8 +2,8 @@
 // Created by Alfie on 11/12/2024.
 //
 
-#ifndef CAT_H
-#define CAT_H
+#ifndef FLOOR_H
+#define FLOOR_H
 #include "GameObject.h"
 #include "Vector.h"
 
@@ -16,12 +16,14 @@ using namespace NCL;
 using namespace NCL::CSC8503;
 using namespace NCL::Maths;
 
-class Cat : public GameObject {
+class Cube : public GameObject {
 public:
-    Cat(const Game& game, const Vector3& position);
+    Cube(const Game& game, const Vector3& position);
 
 protected:
     Rendering::Mesh* mesh;
 };
 
-#endif //CAT_H
+
+
+#endif //FLOOR_H

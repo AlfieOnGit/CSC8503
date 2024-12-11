@@ -26,17 +26,15 @@ public:
 
     void Update(float dt) override;
 
-    [[nodiscard]] GameWorld* getWorld() const { return world; }
-    [[nodiscard]] GameTechRenderer* getRenderer() const { return renderer; }
-    [[nodiscard]] Shader* getShader() const { return basicShader; }
+    [[nodiscard]] GameWorld* GetWorld() const { return world; }
+    [[nodiscard]] GameTechRenderer* GetRenderer() const { return renderer; }
+    [[nodiscard]] Shader* GetShader() const { return basicShader; }
+    [[nodiscard]] Texture* GetBasicTex() const { return basicTex; }
 
 private:
     void InitRenderer();
     void InitCamera();
     void InitWorld();
-
-    GameObject* AddFloorToWorld(const Vector3& position) const;
-    //GameObject* AddCatToWorld(const Vector3& position) const;
 
     void UpdateKeys();
     void LockCameraToObject(GameObject* o) { lockedObject = o; }
@@ -52,7 +50,7 @@ private:
 
     KeyboardMouseController controller;
 
-    bool useGravity;
+    bool useGravity = true;
     bool inSelectionMode;
 
     float forceMagnitude;
@@ -60,7 +58,6 @@ private:
     GameObject* selectionObject = nullptr;
 
     Mesh* capsuleMesh = nullptr;
-    Mesh* cubeMesh = nullptr;
     Mesh* sphereMesh = nullptr;
 
     Texture* basicTex = nullptr;
@@ -72,7 +69,6 @@ private:
     Mesh* enemyMesh	= nullptr;
     Mesh* bonusMesh	= nullptr;
 
-    //Coursework Additional functionality
     GameObject* lockedObject = nullptr;
     Vector3 lockedOffset = Vector3(0, 14, 20);
 

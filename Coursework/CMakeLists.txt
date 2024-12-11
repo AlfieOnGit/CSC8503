@@ -40,6 +40,8 @@ if(USE_VULKAN)
             Game.h
             Character/Cat.cpp
             Character/Cat.h
+            Solid/Cube.cpp
+            Solid/Cube.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -105,6 +107,7 @@ target_sources(${PROJECT_NAME} PRIVATE
         GameTechRenderer/GameTechRenderer.cpp
         GameTechRenderer/GameTechVulkanRenderer.cpp
         Screen/
+        Solid/Cube.cpp
 )
 
 ################################################################################
