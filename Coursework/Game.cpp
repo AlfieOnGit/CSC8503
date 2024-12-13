@@ -137,14 +137,6 @@ void Game::InitWorld() {
     world->AddGameObject(door);
 }
 
-void Game::InitWalls() {
-    auto* wall = new Cube(*this, Vector3(0, -19, -2));
-    wall->SetSize(Vector3(2.5, 3, 7.5));
-    wall->GetPhysicsObject()->SetInverseMass(0);
-    world->AddGameObject(wall);
-}
-
-
 
 void Game::OnFirstLoad() {
     Window::GetWindow()->ShowOSPointer(false);

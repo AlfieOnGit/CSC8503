@@ -41,7 +41,6 @@ private:
     void InitRenderer();
     void InitCamera();
     void InitWorld();
-    void InitWalls();
 
     void LockCameraToObject(GameObject* o) { lockedObject = o; }
 
