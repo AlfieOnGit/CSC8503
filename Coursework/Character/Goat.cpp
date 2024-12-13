@@ -39,12 +39,10 @@ void Goat::CheckForPlayer(float dt) {
 void Goat::ChasePlayer(float dt) {
     Vector3 dist = player->GetTransform().GetPosition() - transform.GetPosition();
     float const len = Vector::Length(dist);
-    if (len < 2) return;
     if (len > 10) {
         SetBehaviour(&Goat::CheckForPlayer);
         return;
     }
-    //dist.y = 0;
     Vector3 const dir = Vector::Normalise(dist);
     float constexpr speed = 1500.0f;
     GetPhysicsObject()->AddForce(dir * speed * dt);

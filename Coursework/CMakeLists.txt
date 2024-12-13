@@ -52,6 +52,9 @@ if(USE_VULKAN)
             Screen/ScreenManager.h
             Screen/ScreenManager.h
             Screen/ScreenManager.cpp
+            Item/Item.h
+            Item/Key.cpp
+            Item/Key.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -118,6 +121,7 @@ target_sources(${PROJECT_NAME} PRIVATE
         Character/Kitten.cpp
         GameTechRenderer/GameTechRenderer.cpp
         GameTechRenderer/GameTechVulkanRenderer.cpp
+        Item/Key.cpp
         Screen/DeathScreen.cpp
         Screen/ScreenManager.cpp
         Solid/Cube.cpp

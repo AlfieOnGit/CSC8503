@@ -26,6 +26,8 @@ namespace NCL::CSC8503 {
 			return isActive;
 		}
 
+		void SetActive(bool isActive) { this->isActive = isActive; }
+
 		Transform& GetTransform() {
 			return transform;
 		}
@@ -54,6 +56,8 @@ namespace NCL::CSC8503 {
 			return name;
 		}
 
+		[[nodiscard]] Vector3 GetStartPos() const { return startPos; }
+
 		virtual void OnCollisionBegin(GameObject* otherObject) {
 			//std::cout << "OnCollisionBegin event occured!\n";
 		}
@@ -81,6 +85,8 @@ namespace NCL::CSC8503 {
 		PhysicsObject*		physicsObject;
 		RenderObject*		renderObject;
 		NetworkObject*		networkObject;
+
+		Vector3 startPos = Vector3();
 
 		bool		isActive;
 		int			worldID;

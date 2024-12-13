@@ -20,6 +20,8 @@ class Cube : public GameObject {
 public:
     Cube(const Game& game, const Vector3& position);
 
+    void SetColour(Vector4 colour);
+
 protected:
     Rendering::Mesh* mesh;
 };

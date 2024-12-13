@@ -14,6 +14,7 @@ Cube::Cube(const Game& game, const Vector3 &position) {
     SetBoundingVolume(volume);
     SetBoundingVolume(volume);
     GetTransform().SetScale(floorSize * 2.0f).SetPosition(position);
+    startPos = position;
 
     mesh = game.GetRenderer()->LoadMesh("cube.msh");
 
@@ -23,3 +24,8 @@ Cube::Cube(const Game& game, const Vector3 &position) {
     GetPhysicsObject()->SetInverseMass(0);
     GetPhysicsObject()->InitCubeInertia();
 }
+
+void Cube::SetColour(Vector4 const colour) {
+    GetRenderObject()->SetColour(colour);
+}
+

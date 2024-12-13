@@ -8,6 +8,7 @@
 #include "Character/Cat.h"
 #include "Character/Goat.h"
 #include "Character/Kitten.h"
+#include "Item/Key.h"
 #include "Solid/Cube.h"
 
 Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindow()->GetMouse()) {
@@ -93,6 +94,9 @@ void Game::InitWorld() {
     auto* goat = new Goat(*this, Vector3(x - 30, 0, z));
     world->AddGameObject(goat);
     characters.push_back(goat);
+
+    auto* key = new Key(0, *this, Vector3(x - 15, 0, z));
+    world->AddGameObject(key);
 }
 
 
@@ -126,10 +130,12 @@ void Game::Update(float const dt) {
 }
 
 void Game::Reset() {
-    for (Character* c : characters) {
-        c->GetTransform().SetPosition(c->GetStartPos());
-        //c->GetPhysicsObject()->ClearForces();
-        c->GetPhysicsObject()->ClearVelocities();
+    GameObjectIterator first, last;
+    world->GetObjectIterators(first, last);
+    for (auto i = first; i != last; ++i) {
+        (*i)->SetActive(true);
+        (*i)->GetTransform().SetPosition((*i)->GetStartPos());
+        (*i)->GetPhysicsObject()->ClearVelocities();
     }
 }
 
