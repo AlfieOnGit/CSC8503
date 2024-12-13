@@ -26,6 +26,7 @@ public:
 
     void Update(float dt) override;
 
+    [[nodiscard]] const KeyboardMouseController* GetController() const { return &controller; }
     [[nodiscard]] GameWorld* GetWorld() const { return world; }
     [[nodiscard]] GameTechRenderer* GetRenderer() const { return renderer; }
     [[nodiscard]] Shader* GetShader() const { return basicShader; }
@@ -63,14 +64,15 @@ private:
     Texture* basicTex = nullptr;
     Shader* basicShader = nullptr;
 
-    Cat* player = nullptr;
+    //Cat* player = nullptr;
+    vector<Character*> characters;
 
     Mesh* kittenMesh = nullptr;
     Mesh* enemyMesh	= nullptr;
     Mesh* bonusMesh	= nullptr;
 
     GameObject* lockedObject = nullptr;
-    Vector3 lockedOffset = Vector3(0, 14, 20);
+    Vector3 lockedOffset = Vector3(0, 7, 10);
 
     GameObject* objClosest = nullptr;
 };

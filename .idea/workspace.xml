@@ -34,9 +34,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Put Cat in its own class">
-      <change afterPath="$PROJECT_DIR$/Coursework/Solid/Cube.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/Solid/Cube.h" afterDir="false" />
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Put Floor as a Cube class">
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Character.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" afterDir="false" />
@@ -86,6 +87,8 @@
     <setting file="file://$PROJECT_DIR$/Coursework/Character/Cat.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Game.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Screen/Screen.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coursework/Solid/Cube.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NCLCoreClasses/Camera.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -215,7 +218,9 @@
       <workItem from="1733316652510" duration="7381000" />
       <workItem from="1733850421391" duration="8392000" />
       <workItem from="1733875186547" duration="4725000" />
-      <workItem from="1733882119619" duration="2200000" />
+      <workItem from="1733882119619" duration="2454000" />
+      <workItem from="1733977091882" duration="4268000" />
+      <workItem from="1734033438484" duration="2588000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -289,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733882665101</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Put Floor as a Cube class">
+      <option name="closed" value="true" />
+      <created>1733884509334</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733884509334</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +337,8 @@
     <MESSAGE value="Add Coursework project" />
     <MESSAGE value="Add some coursework code" />
     <MESSAGE value="Put Cat in its own class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put Cat in its own class" />
+    <MESSAGE value="Put Floor as a Cube class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put Floor as a Cube class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

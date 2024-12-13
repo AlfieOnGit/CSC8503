@@ -12,7 +12,7 @@ Cat::Cat(const Game& game, const Vector3& position) {
     float constexpr meshSize = 1.0f;
     float constexpr inverseMass	= 0.5f;
 
-    auto* volume  = new SphereVolume(1.0f);
+    auto* volume  = new AABBVolume(Vector3(0.25f, 0.5f, 0.5f));
 
     SetBoundingVolume(volume);
 
@@ -25,4 +25,26 @@ Cat::Cat(const Game& game, const Vector3& position) {
 
     GetPhysicsObject()->SetInverseMass(inverseMass);
     GetPhysicsObject()->InitSphereInertia();
+
+    controller = game.GetController();
 }
+
+void Cat::Update(float const dt) {
+    auto pos = transform.GetPosition();
+    float constexpr speed = 3;
+    if (Window::GetKeyboard()->KeyDown(KeyCodes::W)) pos.z -= speed * dt;
+    if (Window::GetKeyboard()->KeyDown(KeyCodes::S)) pos.z += speed * dt;
+    if (Window::GetKeyboard()->KeyDown(KeyCodes::A)) pos.x -= speed * dt;
+    if (Window::GetKeyboard()->KeyDown(KeyCodes::D)) pos.x += speed * dt;
+    transform.SetPosition(pos);
+
+    // auto pos = Vector3();// - GetPhysicsObject()->GetForce();
+    // float constexpr speed = 1000;
+    // if (Window::GetKeyboard()->KeyDown(KeyCodes::W)) pos.z -= speed * dt;
+    // if (Window::GetKeyboard()->KeyDown(KeyCodes::S)) pos.z += speed * dt;
+    // if (Window::GetKeyboard()->KeyDown(KeyCodes::A)) pos.x -= speed * dt;
+    // if (Window::GetKeyboard()->KeyDown(KeyCodes::D)) pos.x += speed * dt;
+    // GetPhysicsObject()->AddForce(pos);
+}
+
+

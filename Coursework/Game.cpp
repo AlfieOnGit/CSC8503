@@ -5,6 +5,7 @@
 #include "Game.h"
 
 #include "Character/Cat.h"
+#include "Character/Kitten.h"
 #include "Solid/Cube.h"
 
 Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindow()->GetMouse()) {
@@ -28,6 +29,8 @@ Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindo
     controller.MapAxis(2, "Forward");
     controller.MapAxis(3, "XLook");
     controller.MapAxis(4, "YLook");
+
+    characters = vector<Character*>();
 
     InitRenderer();
     InitCamera();
@@ -74,16 +77,25 @@ void Game::InitWorld() {
     world->AddGameObject(floor);
 
     Transform const transform = floor->GetTransform();
-    float const x = transform.GetScale().x / 2 + transform.GetPosition().x;
-    float const z = transform.GetScale().z / 2 + transform.GetPosition().z;
-    player = new Cat(*this, Vector3(x, 0, z));
+    std::cout << "Scale.x = " << transform.GetScale().x << '\n';
+    float const x = transform.GetScale().x / 4 + transform.GetPosition().x;
+    float const z = transform.GetScale().z / 4 + transform.GetPosition().z;
+    std::cout << "X = " << x << ", Z = " << z << '\n';
+    auto* player = new Cat(*this, Vector3(x, 0, z));
     world->AddGameObject(player);
     LockCameraToObject(player);
+    characters.push_back(player);
+
+    auto* kitten = new Kitten(*this, Vector3(x, 0, z));
+    world->AddGameObject(kitten);
+    characters.push_back(kitten);
 }
 
 
 void Game::Update(float const dt) {
     if (!inSelectionMode) world->GetMainCamera().UpdateCamera(dt);
+
+    for (Character* c : characters) c->Update(dt);
 
     if (lockedObject != nullptr) {
         Vector3 const objPos = lockedObject->GetTransform().GetPosition();
@@ -110,5 +122,4 @@ void Game::Update(float const dt) {
 }
 
 void Game::UpdateKeys() {
-    //if (Window::GetKeyboard()->Key)
 }
