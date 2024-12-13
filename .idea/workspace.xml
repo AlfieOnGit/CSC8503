@@ -35,17 +35,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add key picking up a bit more">
-      <change afterPath="$PROJECT_DIR$/Coursework/Solid/Base.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/Solid/Base.h" afterDir="false" />
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add base">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Solid/Cube.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Solid/Cube.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Solid/Cube.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Solid/Cube.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Item/Key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Item/Key.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +227,7 @@
       <workItem from="1733875186547" duration="4725000" />
       <workItem from="1733882119619" duration="2454000" />
       <workItem from="1733977091882" duration="4268000" />
-      <workItem from="1734033438484" duration="20173000" />
+      <workItem from="1734033438484" duration="21514000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -377,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734069144900</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add base">
+      <option name="closed" value="true" />
+      <created>1734072703831</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734072703831</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +425,8 @@
     <MESSAGE value="Not much changed :eyes:" />
     <MESSAGE value="Add key picking up" />
     <MESSAGE value="Add key picking up a bit more" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add key picking up a bit more" />
+    <MESSAGE value="Add base" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add base" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

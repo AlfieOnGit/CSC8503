@@ -88,7 +88,7 @@ void Game::InitWorld() {
     LockCameraToObject(player);
     characters.push_back(player);
 
-    auto* kitten = new Kitten(*this, Vector3(x + 5, 0, z));
+    auto* kitten = new Kitten(*this, Vector3(x, 0, z - 10));
     world->AddGameObject(kitten);
     characters.push_back(kitten);
 

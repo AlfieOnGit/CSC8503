@@ -13,11 +13,13 @@ class Game;
 
 class Kitten : public Character {
 public:
-    Kitten(const Game& game, const Vector3& position);
+    Kitten(Game& game, const Vector3& position);
 
     void Update(float const dt) override {
         (this->*behaviour)(dt);
     }
+
+    void OnCollisionBegin(GameObject *otherObject) override;
 
 protected:
     Rendering::Mesh* mesh;
@@ -28,6 +30,7 @@ protected:
     void FollowPlayer(float dt);
 
     void(Kitten::*behaviour)(float);
+    short int& kittensSaved;
 };
 
 

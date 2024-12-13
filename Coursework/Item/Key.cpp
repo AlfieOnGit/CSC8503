@@ -6,8 +6,6 @@
 #include "PhysicsObject.h"
 #include "../Game.h"
 
-#include "AABBVolume.h"
-
 Key::Key(short int id, Game& game, Vector3 position) : Item(id), Cube(game, position) {
     float constexpr meshSize = 1.0f;
     float constexpr inverseMass	= 0.5f;

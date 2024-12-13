@@ -34,6 +34,7 @@ public:
     [[nodiscard]] Shader* GetShader() const { return basicShader; }
     [[nodiscard]] Texture* GetBasicTex() const { return basicTex; }
     [[nodiscard]] Cat* GetPlayer() const { return player; }
+    [[nodiscard]] short int& GetKittensRescued() { return kittensRescued; }
 
 private:
     void InitRenderer();

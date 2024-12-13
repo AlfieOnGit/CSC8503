@@ -8,7 +8,7 @@
 #include "PhysicsObject.h"
 #include "../Game.h"
 
-Kitten::Kitten(const Game &game, const Vector3 &position) {
+Kitten::Kitten(Game &game, const Vector3 &position) : kittensSaved(game.GetKittensRescued()) {
     float constexpr meshSize = 0.5f;
     float constexpr inverseMass	= 0.25f;
     startPos = position;
@@ -29,6 +29,7 @@ Kitten::Kitten(const Game &game, const Vector3 &position) {
     GetPhysicsObject()->InitSphereInertia();
 
     player = game.GetPlayer();
+    behaviour = &Kitten::CheckForPlayer;
     SetBehaviour(&Kitten::CheckForPlayer);
 }
 
@@ -49,4 +50,11 @@ void Kitten::FollowPlayer(float dt) {
     Vector3 const dir = Vector::Normalise(dist);
     float constexpr speed = 1000.0f;
     GetPhysicsObject()->AddForce(dir * speed * dt);
+}
+
+void Kitten::OnCollisionBegin(GameObject *otherObject) {
+    if (isActive && otherObject->GetName() == "base") {
+        kittensSaved++;
+        SetActive(false);
+    }
 }
