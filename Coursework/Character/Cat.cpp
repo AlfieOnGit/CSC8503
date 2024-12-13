@@ -15,7 +15,6 @@ Cat::Cat(const Game& game, const Vector3& position) {
     float constexpr inverseMass	= 0.5f;
     startPos = position;
 
-    //auto* volume  = new AABBVolume(Vector3(0.25f, 0.5f, 0.5f));
     auto* volume = new SphereVolume(0.25f);
 
     SetBoundingVolume(volume);
@@ -29,7 +28,6 @@ Cat::Cat(const Game& game, const Vector3& position) {
 
     GetPhysicsObject()->SetInverseMass(inverseMass);
     GetPhysicsObject()->InitSphereInertia();
-    //GetPhysicsObject()->SetLinearDampening(Vector3(0.9, 1, 0.9));
 
     controller = game.GetController();
     deathScreen = new DeathScreen();
@@ -56,16 +54,6 @@ void Cat::Update(float const dt) {
     if (items.empty()) inventoryText.append(" EMPTY! ");
     inventoryText.pop_back();
     Debug::Print(inventoryText, NCL::Vector2(5, 10));
-
-    // auto pos = Vector3();// - GetPhysicsObject()->GetForce();
-    // float constexpr speed = 1000.0f;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::W)) pos.z -= 1;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::S)) pos.z += 1;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::A)) pos.x -= 1;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::D)) pos.x += 1;
-    // Vector3 const dir = Vector::Normalise(pos);
-    //
-    // GetPhysicsObject()->AddForce(dir * speed * dt);
 }
 
 
@@ -77,5 +65,3 @@ bool Cat::HasItem(short int id) const {
     for (Item* i : items) if (i->GetId() == id) return true;
     return false;
 }
-
-

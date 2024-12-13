@@ -93,22 +93,18 @@ void Game::InitWorld() {
     characters.push_back(player);
 
     auto* kitten = new Kitten(*this, Vector3(x, -15, z - 20));
-    //kitten->GetRenderObject()->SetColour(Vector4(0, 1, 1, 1));
     world->AddGameObject(kitten);
     characters.push_back(kitten);
 
     kitten = new Kitten(*this, Vector3(x + 2, -15, z - 12));
-    //kitten->GetRenderObject()->SetColour(Vector4(0, 1, 1, 1));
     world->AddGameObject(kitten);
     characters.push_back(kitten);
 
     auto* goat = new Goat(*this, Vector3(x, -15, z - 18));
-    //goat->GetRenderObject()->SetColour(Vector4(1, 0, 0, 1));
     world->AddGameObject(goat);
     characters.push_back(goat);
 
     goat = new Goat(*this, Vector3(x, -15, z - 12));
-    //goat->GetRenderObject()->SetColour(Vector4(1, 0, 0, 1));
     world->AddGameObject(goat);
     characters.push_back(goat);
 
@@ -172,7 +168,7 @@ void Game::Update(float const dt) {
         Matrix4 const modelMat = Matrix::Inverse(temp);
 
         Quaternion const q(modelMat);
-        Vector3 const angles = q.ToEuler(); //nearly there now!
+        Vector3 const angles = q.ToEuler();
 
         world->GetMainCamera().SetPosition(camPos);
         world->GetMainCamera().SetPitch(angles.x);

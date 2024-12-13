@@ -5,7 +5,6 @@
 #ifndef BASE_H
 #define BASE_H
 #include "Cube.h"
-#include "GameObject.h"
 
 
 class Base : public Cube {

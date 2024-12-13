@@ -9,8 +9,6 @@
 
 class ScreenManager final {
 public:
-    //static void SetCurrent(Screen* screen) { current = screen; }
-    //static Screen* GetCurrent() { return current; }
     static void Append(Screen* screen);
     static void Pop();
     static Screen* GetCurrent();
@@ -18,7 +16,6 @@ public:
 protected:
     static Screen* screen_stack[MAX_HEIGHT];
     static short int height;
-    //static Screen* current;
 };
 
-#endif //SCREENMANAGER_H
+#endif SCREENMANAGER_H
