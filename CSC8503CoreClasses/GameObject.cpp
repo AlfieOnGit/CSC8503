@@ -6,6 +6,8 @@
 
 using namespace NCL::CSC8503;
 
+NCL::AABBVolume* GameObject::empty = new NCL::AABBVolume(Vector3(0, 0, 0));
+
 GameObject::GameObject(const std::string& objectName)	{
 	name			= objectName;
 	worldID			= -1;

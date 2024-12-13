@@ -59,6 +59,8 @@ if(USE_VULKAN)
             Solid/Base.h
             Screen/StartScreen.cpp
             Screen/StartScreen.h
+            Solid/Door.cpp
+            Solid/Door.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -131,6 +133,7 @@ target_sources(${PROJECT_NAME} PRIVATE
         Screen/StartScreen.cpp
         Solid/Base.cpp
         Solid/Cube.cpp
+        Solid/Door.cpp
 )
 
 ################################################################################

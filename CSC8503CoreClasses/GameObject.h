@@ -1,6 +1,8 @@
 #pragma once
+#include "AABBVolume.h"
 #include "Transform.h"
 #include "CollisionVolume.h"
+#include "PhysicsObject.h"
 
 using std::vector;
 
@@ -19,7 +21,9 @@ namespace NCL::CSC8503 {
 		}
 
 		const CollisionVolume* GetBoundingVolume() const {
-			return boundingVolume;
+			//return boundingVolume;
+			if (isActive) return boundingVolume;
+			return empty;
 		}
 
 		bool IsActive() const {
@@ -93,6 +97,8 @@ namespace NCL::CSC8503 {
 		std::string	name;
 
 		Vector3 broadphaseAABB;
+
+		static AABBVolume* empty;
 	};
 }
 

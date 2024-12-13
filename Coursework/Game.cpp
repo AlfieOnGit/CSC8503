@@ -11,6 +11,7 @@
 #include "Item/Key.h"
 #include "Solid/Base.h"
 #include "Solid/Cube.h"
+#include "Solid/Door.h"
 
 Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindow()->GetMouse()) {
     world = new GameWorld();
@@ -88,11 +89,11 @@ void Game::InitWorld() {
     LockCameraToObject(player);
     characters.push_back(player);
 
-    auto* kitten = new Kitten(*this, Vector3(x, 0, z - 10));
+    auto* kitten = new Kitten(*this, Vector3(x, 0, z - 20));
     world->AddGameObject(kitten);
     characters.push_back(kitten);
 
-    auto* goat = new Goat(*this, Vector3(x - 30, 0, z));
+    auto* goat = new Goat(*this, Vector3(x, 0, z - 18));
     world->AddGameObject(goat);
     characters.push_back(goat);
 
@@ -106,7 +107,32 @@ void Game::InitWorld() {
 
     auto* base = new Base(*this, Vector3(x, -19, z));
     world->AddGameObject(base);
+
+    auto* wall = new Cube(*this, Vector3(x + 5, -19, z - 20));
+    wall->SetSize(Vector3(2.5, 5, 7.5));
+    world->AddGameObject(wall);
+
+    wall = new Cube(*this, Vector3(x - 5, -19, z - 20));
+    wall->SetSize(Vector3(2.5, 5, 7.5));
+    world->AddGameObject(wall);
+
+    wall = new Cube(*this, Vector3(x, -19, z - 30));
+    wall->SetSize(Vector3(7.5, 5.5, 2.5));
+    world->AddGameObject(wall);
+
+    Door* door = new Door(0, *this, Vector3(x, -19, z - 15));
+    door->SetSize(Vector3(7.4, 4.5, 2.4));
+    door->SetColour(Vector4(0, 0, 1, 1));
+    world->AddGameObject(door);
 }
+
+void Game::InitWalls() {
+    auto* wall = new Cube(*this, Vector3(0, -19, -2));
+    wall->SetSize(Vector3(2.5, 3, 7.5));
+    wall->GetPhysicsObject()->SetInverseMass(0);
+    world->AddGameObject(wall);
+}
+
 
 
 void Game::OnFirstLoad() {
