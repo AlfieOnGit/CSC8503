@@ -4,6 +4,7 @@
 
 #include "Game.h"
 
+#include "PhysicsObject.h"
 #include "Character/Cat.h"
 #include "Character/Goat.h"
 #include "Character/Kitten.h"
@@ -123,6 +124,14 @@ void Game::Update(float const dt) {
     renderer->Render();
     Debug::UpdateRenderables(dt);
 }
+
+void Game::Reset() {
+    for (Character* c : characters) {
+        c->GetTransform().SetPosition(c->GetStartPos());
+        c->GetPhysicsObject()->ClearForces();
+    }
+}
+
 
 void Game::UpdateKeys() {
 }

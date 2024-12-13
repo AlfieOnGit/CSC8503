@@ -7,6 +7,7 @@
 #include "Character.h"
 #include "GameObject.h"
 #include "Vector.h"
+#include "../Screen/DeathScreen.h"
 
 namespace NCL { class KeyboardMouseController; }
 
@@ -20,6 +21,7 @@ using namespace NCL::Maths;
 class Cat : public Character {
 public:
     Cat(const Game& game, const Vector3& position);
+    ~Cat();
 
     void Update(float dt) override;
 
@@ -28,6 +30,7 @@ public:
 protected:
     Rendering::Mesh* mesh;
     const KeyboardMouseController* controller;
+    DeathScreen* deathScreen;
 };
 
 #endif //CAT_H

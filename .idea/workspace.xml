@@ -34,12 +34,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add Goat">
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add basic Cat killing">
+      <change afterPath="$PROJECT_DIR$/Coursework/Screen/DeathScreen.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Screen/DeathScreen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Screen/ScreenManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Screen/ScreenManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Character/Cat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Cat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Character/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Character.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Character/Goat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Goat.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Character/Goat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Goat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Screen/Screen.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Screen/Screen.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +95,11 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CSC8503/TutorialGame.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Character/Cat.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coursework/Character/Goat.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Game.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coursework/Screen/DeathScreen.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Screen/Screen.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coursework/Screen/ScreenManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Solid/Cube.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NCLCoreClasses/Camera.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -220,7 +233,7 @@
       <workItem from="1733875186547" duration="4725000" />
       <workItem from="1733882119619" duration="2454000" />
       <workItem from="1733977091882" duration="4268000" />
-      <workItem from="1734033438484" duration="6577000" />
+      <workItem from="1734033438484" duration="11713000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -326,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734053935772</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add basic Cat killing">
+      <option name="closed" value="true" />
+      <created>1734054383216</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734054383216</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +386,8 @@
     <MESSAGE value="Add Kitten and Character" />
     <MESSAGE value="Add Kitten behaviour state machine" />
     <MESSAGE value="Add Goat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Goat" />
+    <MESSAGE value="Add basic Cat killing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add basic Cat killing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

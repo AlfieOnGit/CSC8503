@@ -5,11 +5,14 @@
 #include "Cat.h"
 
 #include "../Game.h"
+#include "../Screen/DeathScreen.h"
 #include "PhysicsObject.h"
+#include "../Screen/ScreenManager.h"
 
 Cat::Cat(const Game& game, const Vector3& position) {
     float constexpr meshSize = 1.0f;
     float constexpr inverseMass	= 0.5f;
+    startPos = position;
 
     auto* volume  = new AABBVolume(Vector3(0.25f, 0.5f, 0.5f));
 
@@ -26,7 +29,14 @@ Cat::Cat(const Game& game, const Vector3& position) {
     GetPhysicsObject()->InitSphereInertia();
 
     controller = game.GetController();
+    deathScreen = new DeathScreen();
 }
+
+
+Cat::~Cat() {
+    delete deathScreen;
+}
+
 
 void Cat::Update(float const dt) {
     auto pos = transform.GetPosition();
@@ -38,7 +48,8 @@ void Cat::Update(float const dt) {
     transform.SetPosition(pos);
 }
 
+
 void Cat::Kill() {
-    Debug::Print("You died!", Vector2(5, 85));
+    ScreenManager::Append(deathScreen);
 }
 

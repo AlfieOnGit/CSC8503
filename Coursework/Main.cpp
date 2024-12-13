@@ -4,6 +4,7 @@
 
 #include "Game.h"
 #include "Window.h"
+#include "Screen/ScreenManager.h"
 
 using namespace NCL;
 using namespace CSC8503;
@@ -21,6 +22,7 @@ int main() {
     window->LockMouseToWindow(true);
 
     auto *game = new Game();
+    ScreenManager::Append(game);
 
     window->GetTimer().GetTimeDeltaSeconds();
 
@@ -34,7 +36,7 @@ int main() {
 
         window->SetTitle("One Cute Tabby, Not Too Shabby! Frame time: " + std::to_string(1000.0f * dt));
 
-        game->Update(dt);
+        ScreenManager::GetCurrent()->Update(dt);
     }
     Window::DestroyGameWindow();
 

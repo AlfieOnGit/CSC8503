@@ -11,6 +11,7 @@
 Goat::Goat(const Game &game, const Vector3 &position) {
     float constexpr meshSize = 0.5f;
     float constexpr inverseMass	= 0.25f;
+    startPos = position;
 
     auto* volume  = new AABBVolume(Vector3(0.25f, 0.5f, 0.5f));
 

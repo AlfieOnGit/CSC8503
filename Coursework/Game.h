@@ -24,7 +24,9 @@ public:
     Game();
     ~Game();
 
+    void OnFirstLoad() override { }
     void Update(float dt) override;
+    void Reset();
 
     [[nodiscard]] const KeyboardMouseController* GetController() const { return &controller; }
     [[nodiscard]] GameWorld* GetWorld() const { return world; }

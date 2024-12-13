@@ -10,6 +10,7 @@
 class Screen {
 public:
     //virtual ~Screen() = 0;
+    virtual void OnFirstLoad() = 0;
     virtual void Update(float dt) = 0;
 };
 
