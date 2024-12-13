@@ -4,6 +4,7 @@
 
 #ifndef KITTEN_H
 #define KITTEN_H
+#include "Cat.h"
 #include "Character.h"
 #include "Mesh.h"
 
@@ -14,10 +15,19 @@ class Kitten : public Character {
 public:
     Kitten(const Game& game, const Vector3& position);
 
-    void Update(float dt) override;
+    void Update(float const dt) override {
+        (this->*behaviour)(dt);
+    }
 
 protected:
-    NCL::Rendering::Mesh* mesh;
+    Rendering::Mesh* mesh;
+    Cat* player;
+
+    void SetBehaviour(void(Kitten::*behaviour)(float)) { this->behaviour = behaviour; }
+    void CheckForPlayer(float dt);
+    void FollowPlayer(float dt);
+
+    void(Kitten::*behaviour)(float);
 };
 
 

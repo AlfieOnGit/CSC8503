@@ -34,14 +34,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Put Floor as a Cube class">
-      <change afterPath="$PROJECT_DIR$/Coursework/Character/Character.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.h" afterDir="false" />
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add Kitten and Character">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Cat.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Character/Cat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Cat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.h" afterDir="false" />
     </list>
@@ -83,6 +79,10 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CSC8503/TutorialGame.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Character/Cat.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coursework/Game.h" root0="FORCE_HIGHLIGHTING" />
@@ -220,7 +220,7 @@
       <workItem from="1733875186547" duration="4725000" />
       <workItem from="1733882119619" duration="2454000" />
       <workItem from="1733977091882" duration="4268000" />
-      <workItem from="1734033438484" duration="2588000" />
+      <workItem from="1734033438484" duration="4794000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -302,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733884509334</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add Kitten and Character">
+      <option name="closed" value="true" />
+      <created>1734050356686</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734050356686</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +346,8 @@
     <MESSAGE value="Add some coursework code" />
     <MESSAGE value="Put Cat in its own class" />
     <MESSAGE value="Put Floor as a Cube class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put Floor as a Cube class" />
+    <MESSAGE value="Add Kitten and Character" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Kitten and Character" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -81,7 +81,7 @@ void Game::InitWorld() {
     float const x = transform.GetScale().x / 4 + transform.GetPosition().x;
     float const z = transform.GetScale().z / 4 + transform.GetPosition().z;
     std::cout << "X = " << x << ", Z = " << z << '\n';
-    auto* player = new Cat(*this, Vector3(x, 0, z));
+    player = new Cat(*this, Vector3(x, 0, z));
     world->AddGameObject(player);
     LockCameraToObject(player);
     characters.push_back(player);

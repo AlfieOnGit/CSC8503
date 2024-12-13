@@ -31,6 +31,7 @@ public:
     [[nodiscard]] GameTechRenderer* GetRenderer() const { return renderer; }
     [[nodiscard]] Shader* GetShader() const { return basicShader; }
     [[nodiscard]] Texture* GetBasicTex() const { return basicTex; }
+    [[nodiscard]] Cat* GetPlayer() const { return player; }
 
 private:
     void InitRenderer();
@@ -64,7 +65,7 @@ private:
     Texture* basicTex = nullptr;
     Shader* basicShader = nullptr;
 
-    //Cat* player = nullptr;
+    Cat* player = nullptr;
     vector<Character*> characters;
 
     Mesh* kittenMesh = nullptr;

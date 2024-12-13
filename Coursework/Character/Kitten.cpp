@@ -25,9 +25,26 @@ Kitten::Kitten(const Game &game, const Vector3 &position) {
 
     GetPhysicsObject()->SetInverseMass(inverseMass);
     GetPhysicsObject()->InitSphereInertia();
+
+    player = game.GetPlayer();
+    SetBehaviour(&Kitten::CheckForPlayer);
 }
 
-void Kitten::Update(float dt) {
-
+void Kitten::CheckForPlayer(float dt) {
+    Vector3 const dist = player->GetTransform().GetPosition() - transform.GetPosition();
+    if (Vector::Length(dist) < 5) SetBehaviour(&Kitten::FollowPlayer);
 }
 
+
+void Kitten::FollowPlayer(float dt) {
+    Vector3 const dist = player->GetTransform().GetPosition() - transform.GetPosition();
+    float const len = Vector::Length(dist);
+    if (len < 2) return;
+    if (len > 5) {
+        SetBehaviour(&Kitten::CheckForPlayer);
+        return;
+    }
+    Vector3 const dir = Vector::Normalise(dist);
+    float constexpr speed = 1000.0f;
+    GetPhysicsObject()->AddForce(dir * speed * dt);
+}
