@@ -128,7 +128,8 @@ void Game::Update(float const dt) {
 void Game::Reset() {
     for (Character* c : characters) {
         c->GetTransform().SetPosition(c->GetStartPos());
-        c->GetPhysicsObject()->ClearForces();
+        //c->GetPhysicsObject()->ClearForces();
+        c->GetPhysicsObject()->ClearVelocities();
     }
 }
 

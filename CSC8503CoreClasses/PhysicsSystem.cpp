@@ -384,7 +384,7 @@ void PhysicsSystem::IntegrateVelocity(float dt) {
 		position += linearVel * dt;
 		transform.SetPosition(position);
 
-		linearVel = linearVel * frameLinearDamping;
+		linearVel = linearVel * frameLinearDamping * object->GetLinearDampening();
 		object->SetLinearVelocity(linearVel);
 
 		// ORIENTATION

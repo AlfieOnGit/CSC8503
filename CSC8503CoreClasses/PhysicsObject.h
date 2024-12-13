@@ -16,6 +16,8 @@ namespace NCL {
 				return linearVelocity;
 			}
 
+			[[nodiscard]] Vector3 GetLinearDampening() const { return linearDampening; }
+
 			Vector3 GetAngularVelocity() const {
 				return angularVelocity;
 			}
@@ -52,8 +54,15 @@ namespace NCL {
 				linearVelocity = v;
 			}
 
+			void SetLinearDampening(const Vector3 dampening) { this->linearDampening = dampening; }
+
 			void SetAngularVelocity(const Vector3& v) {
 				angularVelocity = v;
+			}
+
+			void ClearVelocities() {
+				linearVelocity = Vector3();
+				angularVelocity = Vector3();
 			}
 
 			void InitCubeInertia();
@@ -76,6 +85,7 @@ namespace NCL {
 			//linear stuff
 			Vector3 linearVelocity;
 			Vector3 force;
+			Vector3 linearDampening = Vector3(1, 1, 1);
 			
 			//angular stuff
 			Vector3 angularVelocity;
