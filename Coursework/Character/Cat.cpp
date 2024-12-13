@@ -15,7 +15,8 @@ Cat::Cat(const Game& game, const Vector3& position) {
     float constexpr inverseMass	= 0.5f;
     startPos = position;
 
-    auto* volume  = new AABBVolume(Vector3(0.25f, 0.5f, 0.5f));
+    //auto* volume  = new AABBVolume(Vector3(0.25f, 0.5f, 0.5f));
+    auto* volume = new SphereVolume(0.25f);
 
     SetBoundingVolume(volume);
 
@@ -54,7 +55,7 @@ void Cat::Update(float const dt) {
     if (HasItem(1)) inventoryText.append(" Red Key,");
     if (items.empty()) inventoryText.append(" EMPTY! ");
     inventoryText.pop_back();
-    Debug::Print(inventoryText, NCL::Vector2(5, 15));
+    Debug::Print(inventoryText, NCL::Vector2(5, 10));
 
     // auto pos = Vector3();// - GetPhysicsObject()->GetForce();
     // float constexpr speed = 1000.0f;

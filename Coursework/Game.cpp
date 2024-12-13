@@ -9,6 +9,7 @@
 #include "Character/Goat.h"
 #include "Character/Kitten.h"
 #include "Item/Key.h"
+#include "Solid/Base.h"
 #include "Solid/Cube.h"
 
 Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindow()->GetMouse()) {
@@ -102,6 +103,14 @@ void Game::InitWorld() {
     auto* redKey = new Key(1, *this, Vector3(x + 15, 0, z));
     redKey->SetColour(Vector4(1, 0, 0, 1));
     world->AddGameObject(redKey);
+
+    auto* base = new Base(*this, Vector3(x, -19, z));
+    // auto* base = new Cube(*this, Vector3(x, -19, z));
+    // base->GetPhysicsObject()->SetInverseMass(0);
+    // //base->SetPhysicsObject(nullptr);
+    // base->SetSize(Vector3(5, 1.1, 5));
+    // base->SetColour(Vector4(0, 1, 0, 1));
+    world->AddGameObject(base);
 }
 
 
@@ -126,6 +135,8 @@ void Game::Update(float const dt) {
         world->GetMainCamera().SetYaw(angles.y);
     }
 
+    Debug::Print("Kittens rescued: " + std::to_string(kittensRescued), Vector2(60, 10));
+
     world->UpdateWorld(dt);
     renderer->Update(dt);
     physics->Update(dt);
@@ -143,8 +154,4 @@ void Game::Reset() {
         (*i)->GetPhysicsObject()->ClearVelocities();
     }
     player->ClearItems();
-}
-
-
-void Game::UpdateKeys() {
 }

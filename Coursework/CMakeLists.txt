@@ -55,6 +55,8 @@ if(USE_VULKAN)
             Item/Item.h
             Item/Key.cpp
             Item/Key.h
+            Solid/Base.cpp
+            Solid/Base.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -124,6 +126,7 @@ target_sources(${PROJECT_NAME} PRIVATE
         Item/Key.cpp
         Screen/DeathScreen.cpp
         Screen/ScreenManager.cpp
+        Solid/Base.cpp
         Solid/Cube.cpp
 )
 

@@ -21,6 +21,7 @@ public:
     Cube(const Game& game, const Vector3& position);
 
     void SetColour(Vector4 colour);
+    void SetSize(Vector3 size);
 
 protected:
     Rendering::Mesh* mesh;

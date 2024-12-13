@@ -12,7 +12,6 @@ Cube::Cube(const Game& game, const Vector3 &position) {
     auto const floorSize = Vector3(200, 2, 200);
     auto* volume = new AABBVolume(floorSize);
     SetBoundingVolume(volume);
-    SetBoundingVolume(volume);
     GetTransform().SetScale(floorSize * 2.0f).SetPosition(position);
     startPos = position;
 
@@ -28,4 +27,11 @@ Cube::Cube(const Game& game, const Vector3 &position) {
 void Cube::SetColour(Vector4 const colour) {
     GetRenderObject()->SetColour(colour);
 }
+
+void Cube::SetSize(Vector3 size) {
+    auto* volume = new AABBVolume(size);
+    SetBoundingVolume(volume);
+    GetTransform().SetScale(size * 2.0f);
+}
+
 

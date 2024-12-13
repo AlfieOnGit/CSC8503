@@ -13,7 +13,8 @@ Kitten::Kitten(const Game &game, const Vector3 &position) {
     float constexpr inverseMass	= 0.25f;
     startPos = position;
 
-    auto* volume  = new AABBVolume(Vector3(0.125f, 0.25f, 0.25f));
+    //auto* volume  = new AABBVolume(Vector3(0.125f, 0.25f, 0.25f));
+    auto* volume = new SphereVolume(0.2f);
 
     SetBoundingVolume(volume);
 

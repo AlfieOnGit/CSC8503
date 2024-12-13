@@ -40,7 +40,6 @@ private:
     void InitCamera();
     void InitWorld();
 
-    void UpdateKeys();
     void LockCameraToObject(GameObject* o) { lockedObject = o; }
 
     GameWorld* world;
@@ -78,6 +77,8 @@ private:
     Vector3 lockedOffset = Vector3(0, 7, 10);
 
     GameObject* objClosest = nullptr;
+
+    short int kittensRescued = 0;
 };
 
 
