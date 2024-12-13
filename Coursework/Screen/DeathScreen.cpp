@@ -11,6 +11,8 @@
 
 void DeathScreen::OnFirstLoad() {
     NCL::Debug::Print("You died! Press ENTER to restart!", NCL::Vector2(5, 85));
+    Window::GetWindow()->ShowOSPointer(true);
+    Window::GetWindow()->LockMouseToWindow(false);
 }
 
 

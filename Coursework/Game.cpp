@@ -105,12 +105,13 @@ void Game::InitWorld() {
     world->AddGameObject(redKey);
 
     auto* base = new Base(*this, Vector3(x, -19, z));
-    // auto* base = new Cube(*this, Vector3(x, -19, z));
-    // base->GetPhysicsObject()->SetInverseMass(0);
-    // //base->SetPhysicsObject(nullptr);
-    // base->SetSize(Vector3(5, 1.1, 5));
-    // base->SetColour(Vector4(0, 1, 0, 1));
     world->AddGameObject(base);
+}
+
+
+void Game::OnFirstLoad() {
+    Window::GetWindow()->ShowOSPointer(false);
+    Window::GetWindow()->LockMouseToWindow(true);
 }
 
 
@@ -154,4 +155,5 @@ void Game::Reset() {
         (*i)->GetPhysicsObject()->ClearVelocities();
     }
     player->ClearItems();
+    kittensRescued = 0;
 }

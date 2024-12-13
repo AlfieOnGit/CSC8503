@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "Window.h"
 #include "Screen/ScreenManager.h"
+#include "Screen/StartScreen.h"
 
 using namespace NCL;
 using namespace CSC8503;
@@ -18,13 +19,16 @@ int main() {
     Window *window = Window::CreateGameWindow(initInfo);
     if (!window->HasInitialised()) return -1;
 
-    window->ShowOSPointer(false);
-    window->LockMouseToWindow(true);
+    window->GetTimer().GetTimeDeltaSeconds();
 
     auto *game = new Game();
     ScreenManager::Append(game);
 
-    window->GetTimer().GetTimeDeltaSeconds();
+    auto startScreen = StartScreen();
+    StartScreen* s = &startScreen;
+    ScreenManager::Append(s);
+
+    game->Update(window->GetTimer().GetTimeDeltaSeconds());
 
     while (window->UpdateWindow() && !Window::GetKeyboard()->KeyDown(KeyCodes::ESCAPE)) {
         float const dt = Window::GetTimer().GetTimeDeltaSeconds();

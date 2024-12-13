@@ -24,7 +24,7 @@ public:
     Game();
     ~Game();
 
-    void OnFirstLoad() override { }
+    void OnFirstLoad() override;
     void Update(float dt) override;
     void Reset();
 

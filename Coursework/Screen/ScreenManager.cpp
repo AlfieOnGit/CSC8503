@@ -4,7 +4,6 @@
 
 #include "ScreenManager.h"
 
-//Screen* ScreenManager::current[3];
 Screen* ScreenManager::screen_stack[3];
 short int ScreenManager::height = 0;
 
@@ -17,6 +16,7 @@ void ScreenManager::Append(Screen *screen) {
 void ScreenManager::Pop() {
     if (height == 0) return;
     screen_stack[--height] = nullptr;
+    screen_stack[height - 1]->OnFirstLoad();
 }
 
 Screen *ScreenManager::GetCurrent() {
