@@ -9,6 +9,7 @@
 #include "Character/Goat.h"
 #include "Character/Kitten.h"
 #include "Item/Key.h"
+#include "Screen/ScreenManager.h"
 #include "Solid/Base.h"
 #include "Solid/Cube.h"
 #include "Solid/Door.h"
@@ -42,6 +43,8 @@ Game::Game() : controller(*Window::GetWindow()->GetKeyboard(), *Window::GetWindo
     InitWorld();
 
     physics->UseGravity(true);
+
+    winScreen = new WinScreen();
 }
 
 
@@ -89,19 +92,31 @@ void Game::InitWorld() {
     LockCameraToObject(player);
     characters.push_back(player);
 
-    auto* kitten = new Kitten(*this, Vector3(x, 0, z - 20));
+    auto* kitten = new Kitten(*this, Vector3(x, -15, z - 20));
+    //kitten->GetRenderObject()->SetColour(Vector4(0, 1, 1, 1));
     world->AddGameObject(kitten);
     characters.push_back(kitten);
 
-    auto* goat = new Goat(*this, Vector3(x, 0, z - 18));
+    kitten = new Kitten(*this, Vector3(x + 2, -15, z - 12));
+    //kitten->GetRenderObject()->SetColour(Vector4(0, 1, 1, 1));
+    world->AddGameObject(kitten);
+    characters.push_back(kitten);
+
+    auto* goat = new Goat(*this, Vector3(x, -15, z - 18));
+    //goat->GetRenderObject()->SetColour(Vector4(1, 0, 0, 1));
     world->AddGameObject(goat);
     characters.push_back(goat);
 
-    auto* blueKey = new Key(0, *this, Vector3(x - 15, 0, z));
+    goat = new Goat(*this, Vector3(x, -15, z - 12));
+    //goat->GetRenderObject()->SetColour(Vector4(1, 0, 0, 1));
+    world->AddGameObject(goat);
+    characters.push_back(goat);
+
+    auto* blueKey = new Key(0, *this, Vector3(x - 15, -15, z));
     blueKey->SetColour(Vector4(0, 0, 1, 1));
     world->AddGameObject(blueKey);
 
-    auto* redKey = new Key(1, *this, Vector3(x + 15, 0, z));
+    auto* redKey = new Key(1, *this, Vector3(x + 15, -15, z));
     redKey->SetColour(Vector4(1, 0, 0, 1));
     world->AddGameObject(redKey);
 
@@ -142,6 +157,8 @@ void Game::OnFirstLoad() {
 
 
 void Game::Update(float const dt) {
+    if (kittensRescued == 2) ScreenManager::Append(winScreen);
+
     if (!inSelectionMode) world->GetMainCamera().UpdateCamera(dt);
 
     for (Character* c : characters) c->Update(dt);

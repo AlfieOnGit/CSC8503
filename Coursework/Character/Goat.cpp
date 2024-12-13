@@ -22,6 +22,8 @@ Goat::Goat(const Game &game, const Vector3 &position) {
     mesh = game.GetRenderer()->LoadMesh("Goat.msh");
 
     SetRenderObject(new RenderObject(&GetTransform(), mesh, nullptr, game.GetShader()));
+    renderObject->GetTransform()->SetOrientation(Quaternion(0.0f, 180, 0, 1));
+    renderObject->SetColour(Vector4(1, 0, 0, 1));
     SetPhysicsObject(new PhysicsObject(&GetTransform(), GetBoundingVolume()));
 
     GetPhysicsObject()->SetInverseMass(inverseMass);

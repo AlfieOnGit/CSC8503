@@ -23,6 +23,7 @@ Kitten::Kitten(Game &game, const Vector3 &position) : kittensSaved(game.GetKitte
     mesh = game.GetRenderer()->LoadMesh("Kitten.msh");
 
     SetRenderObject(new RenderObject(&GetTransform(), mesh, nullptr, game.GetShader()));
+    renderObject->SetColour(Vector4(0, 1, 1, 1));
     SetPhysicsObject(new PhysicsObject(&GetTransform(), GetBoundingVolume()));
 
     GetPhysicsObject()->SetInverseMass(inverseMass);

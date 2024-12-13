@@ -11,6 +11,7 @@
 #include "Character/Cat.h"
 #include "GameTechRenderer/GameTechRenderer.h"
 #include "Screen/Screen.h"
+#include "Screen/WinScreen.h"
 
 namespace NCL::CSC8503 {
     class StateGameObject;
@@ -81,6 +82,7 @@ private:
     GameObject* objClosest = nullptr;
 
     short int kittensRescued = 0;
+    WinScreen* winScreen;
 };
 
 
