@@ -15,12 +15,12 @@ class Goat : public Character {
 public:
     Goat(const Game& game, const Vector3& position);
 
-    void Update(float const dt) override {
-        (this->*behaviour)(dt);
-    }
+    void Update(float const dt) override { (this->*behaviour)(dt); }
+
+    void OnCollisionBegin(GameObject *otherObject) override;
 
 protected:
-    NCL::Rendering::Mesh* mesh;
+    Rendering::Mesh* mesh;
     Cat* player;
 
     void SetBehaviour(void(Goat::*behaviour)(float)) { this->behaviour = behaviour; }

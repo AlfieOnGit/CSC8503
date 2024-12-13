@@ -49,4 +49,7 @@ void Goat::ChasePlayer(float dt) {
     GetPhysicsObject()->AddForce(dir * speed * dt);
 }
 
+void Goat::OnCollisionBegin(GameObject *otherObject) {
+    if (otherObject == player) player->Kill();
+}
 

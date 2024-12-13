@@ -23,6 +23,8 @@ public:
 
     void Update(float dt) override;
 
+    void Kill();
+
 protected:
     Rendering::Mesh* mesh;
     const KeyboardMouseController* controller;

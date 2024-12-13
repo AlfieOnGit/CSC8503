@@ -6,7 +6,6 @@
 
 #include "../Game.h"
 #include "PhysicsObject.h"
-#include "SphereVolume.h"
 
 Cat::Cat(const Game& game, const Vector3& position) {
     float constexpr meshSize = 1.0f;
@@ -37,14 +36,9 @@ void Cat::Update(float const dt) {
     if (Window::GetKeyboard()->KeyDown(KeyCodes::A)) pos.x -= speed * dt;
     if (Window::GetKeyboard()->KeyDown(KeyCodes::D)) pos.x += speed * dt;
     transform.SetPosition(pos);
-
-    // auto pos = Vector3();// - GetPhysicsObject()->GetForce();
-    // float constexpr speed = 1000;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::W)) pos.z -= speed * dt;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::S)) pos.z += speed * dt;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::A)) pos.x -= speed * dt;
-    // if (Window::GetKeyboard()->KeyDown(KeyCodes::D)) pos.x += speed * dt;
-    // GetPhysicsObject()->AddForce(pos);
 }
 
+void Cat::Kill() {
+    Debug::Print("You died!", Vector2(5, 85));
+}
 
