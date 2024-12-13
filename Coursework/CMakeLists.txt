@@ -45,6 +45,8 @@ if(USE_VULKAN)
             Character/Kitten.cpp
             Character/Kitten.h
             Character/Character.h
+            Character/Goat.cpp
+            Character/Goat.h
     )
 
     foreach (file ${SHADER_FILES})
@@ -107,6 +109,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 target_sources(${PROJECT_NAME} PRIVATE
         Character/Cat.cpp
+        Character/Goat.cpp
         Character/Kitten.cpp
         GameTechRenderer/GameTechRenderer.cpp
         GameTechRenderer/GameTechVulkanRenderer.cpp

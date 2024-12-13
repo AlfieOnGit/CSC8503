@@ -5,6 +5,7 @@
 #include "Game.h"
 
 #include "Character/Cat.h"
+#include "Character/Goat.h"
 #include "Character/Kitten.h"
 #include "Solid/Cube.h"
 
@@ -77,18 +78,20 @@ void Game::InitWorld() {
     world->AddGameObject(floor);
 
     Transform const transform = floor->GetTransform();
-    std::cout << "Scale.x = " << transform.GetScale().x << '\n';
     float const x = transform.GetScale().x / 4 + transform.GetPosition().x;
     float const z = transform.GetScale().z / 4 + transform.GetPosition().z;
-    std::cout << "X = " << x << ", Z = " << z << '\n';
     player = new Cat(*this, Vector3(x, 0, z));
     world->AddGameObject(player);
     LockCameraToObject(player);
     characters.push_back(player);
 
-    auto* kitten = new Kitten(*this, Vector3(x, 0, z));
+    auto* kitten = new Kitten(*this, Vector3(x + 5, 0, z));
     world->AddGameObject(kitten);
     characters.push_back(kitten);
+
+    auto* goat = new Goat(*this, Vector3(x - 30, 0, z));
+    world->AddGameObject(goat);
+    characters.push_back(goat);
 }
 
 

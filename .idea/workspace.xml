@@ -34,12 +34,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add Kitten and Character">
+    <list default="true" id="30cee8d9-7e6b-4710-9ea5-46bb0ffa65fe" name="Changes" comment="Add Kitten behaviour state machine">
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Goat.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework/Character/Goat.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Character/Kitten.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Character/Kitten.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coursework/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework/Main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +221,7 @@
       <workItem from="1733875186547" duration="4725000" />
       <workItem from="1733882119619" duration="2454000" />
       <workItem from="1733977091882" duration="4268000" />
-      <workItem from="1734033438484" duration="4794000" />
+      <workItem from="1734033438484" duration="5907000" />
     </task>
     <task id="LOCAL-00001" summary="Constraints and solvers tutorial">
       <option name="closed" value="true" />
@@ -310,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734050356686</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add Kitten behaviour state machine">
+      <option name="closed" value="true" />
+      <created>1734052832131</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734052832131</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +356,8 @@
     <MESSAGE value="Put Cat in its own class" />
     <MESSAGE value="Put Floor as a Cube class" />
     <MESSAGE value="Add Kitten and Character" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Kitten and Character" />
+    <MESSAGE value="Add Kitten behaviour state machine" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Kitten behaviour state machine" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -32,7 +32,7 @@ int main() {
             continue;
         }
 
-        window->SetTitle("Frame time: " + std::to_string(1000.0f * dt));
+        window->SetTitle("One Cute Tabby, Not Too Shabby! Frame time: " + std::to_string(1000.0f * dt));
 
         game->Update(dt);
     }
