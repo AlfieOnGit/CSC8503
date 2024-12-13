@@ -95,8 +95,13 @@ void Game::InitWorld() {
     world->AddGameObject(goat);
     characters.push_back(goat);
 
-    auto* key = new Key(0, *this, Vector3(x - 15, 0, z));
-    world->AddGameObject(key);
+    auto* blueKey = new Key(0, *this, Vector3(x - 15, 0, z));
+    blueKey->SetColour(Vector4(0, 0, 1, 1));
+    world->AddGameObject(blueKey);
+
+    auto* redKey = new Key(1, *this, Vector3(x + 15, 0, z));
+    redKey->SetColour(Vector4(1, 0, 0, 1));
+    world->AddGameObject(redKey);
 }
 
 
@@ -137,6 +142,7 @@ void Game::Reset() {
         (*i)->GetTransform().SetPosition((*i)->GetStartPos());
         (*i)->GetPhysicsObject()->ClearVelocities();
     }
+    player->ClearItems();
 }
 
 

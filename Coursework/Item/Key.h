@@ -6,6 +6,7 @@
 #define KEY_H
 
 #include "Item.h"
+#include "../Character/Cat.h"
 #include "../Solid/Cube.h"
 
 class Key : public Item, public Cube {
@@ -15,7 +16,7 @@ public:
     void OnCollisionBegin(GameObject *otherObject) override;
 
 protected:
-    GameObject* player;
+    Cat* player;
 };
 
 

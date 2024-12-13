@@ -9,6 +9,8 @@
 #include "Vector.h"
 #include "../Screen/DeathScreen.h"
 
+class Item;
+
 namespace NCL { class KeyboardMouseController; }
 
 namespace NCL::Rendering { class Mesh; }
@@ -27,10 +29,15 @@ public:
 
     void Kill();
 
+    void AddItem(Item* item) { items.push_back(item); }
+    void ClearItems() { items.clear(); }
+    [[nodiscard]] bool HasItem(short int id) const;
+
 protected:
     Rendering::Mesh* mesh;
     const KeyboardMouseController* controller;
     DeathScreen* deathScreen;
+    vector<Item*> items;
 };
 
 #endif //CAT_H
